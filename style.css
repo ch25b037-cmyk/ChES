@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+    --ink: #17231f;
+    --paper: #f5f7f2;
+    --lime: #d7ed56;
+    --lime-dark: #b7cf32;
+    --line: rgba(23, 35, 31, 0.13);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    color: var(--ink);
+    background: #dce5d8;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.page-shell {
+    position: relative;
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    overflow: hidden;
+    padding: 48px 20px;
+    background:
+        radial-gradient(rgba(234, 247, 158, 0.7), transparent 28%),
+        radial-gradient(rgba(163, 205, 176, 0.8), transparent 33%),
+        var(--paper);
+}
+
+
+.profile-card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 460px);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.74);
+    box-shadow: 0 28px 70px rgba(48, 69, 52, 0.19), 0 4px 12px rgba(48, 69, 52, 0.06);
+    backdrop-filter: blur(18px);
+}
+
+.card-topline,
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 30px;
+}
+
+.availability,
+.footer-label,
+.details,
+.role {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+}
+
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #9cbb25;
+    box-shadow: 0 0 0 4px rgba(156, 187, 37, 0.15);
+}
+
+.card-mark {
+    color: var(--lime-dark);
+    font-size: 1.4rem;
+}
+
+.profile-intro {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 12px 30px 32px;
+}
+
+.portrait-frame {
+    flex: 0 0 144px;
+    height: 176px;
+    overflow: hidden;
+    border-radius: 80px 80px 18px 18px;
+    transform: rotate(-3deg);
+    background: var(--lime);
+}
+
+
+h1 {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.8rem, 11vw, 4.1rem);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+}
+
+h1 span {
+    color: var(--lime-dark);
+}
+
+.role {
+    margin: 18px 0 0;
+    line-height: 1.5;
+}
+
+.role span {
+    margin: 0 4px;
+    color: var(--lime-dark);
+}
+
+.card-body {
+    padding: 26px 30px 30px;
+    border-top: 1px solid var(--line);
+}
+
+.description {
+    max-width: 340px;
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.55;
+    letter-spacing: -0.02em;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0 28px;
+    font-size: 0.69rem;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px 16px 20px;
+    border-radius: 14px;
+    color: var(--ink);
+    background: var(--lime);
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.contact-button:hover{
+    background: #e1f37c;
+    box-shadow: 0 8px 20px rgba(183, 207, 50, 0.25);
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.card-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+}
+
+.social-links a {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink);
+    font-size: 0.68rem;
+    font-weight: 700;
+    transition: color 180ms ease, background 180ms ease;
+}
+
+.social-links a:hover{
+    color: var(--paper);
+    background: var(--ink);
+    outline: none;
+}
